@@ -1,0 +1,6 @@
+NODE_NAME=freeride
+COOKIE=freeride
+CLEAN_BOOT=start_clean
+#SU=freeride
+LANG=en_US.UTF-8
+HEART=yes
