@@ -12,21 +12,8 @@
         kernel,
         stdlib,
         gaucho,
-        xl_stdlib
+        xl_stdlib,
+        cowboot
     ]},
-    {mod, {freeride_web_app, []}},
-    {env, [
-        {dispatch, [
-            {'_', [
-                {"/[...]", cowboy_static, [
-                    {directory, <<"/srv/repo">>},
-                    {mimetypes, [
-                        {<<".ez">>, [<<"application/x-erlang-application-archive">>]}
-                    ]}
-                ]}
-            ]}
-        ]},
-        {listeners, [
-            {http, 100, [{port, 8080}]}
-        ]}]}
+    {mod, {freeride_web_app, []}}
 ]}.

@@ -14,13 +14,7 @@
 %% API
 -export([start/2, stop/1]).
 
-start(_Type, _Args) ->
-    do([error_m ||
-        Dispatch <- xl_application:eget_env(freeride_web, dispatch),
-        Listeners <- xl_application:eget_env(freeride_web, listeners),
-        gaucho:start(Dispatch, Listeners),
-        freeride_web_sup:start_link()
-    ]).
+start(_Type, _Args) -> freeride_web_sup:start_link().
 
 stop(_State) ->
     ok.
